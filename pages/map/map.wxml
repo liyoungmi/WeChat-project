@@ -1,0 +1,33 @@
+<!--pages/map/map.wxml-->
+<view class='babababbaabba' style='width:100%;position:fixed;top:0;z-index:1;'>
+  <view class='input-address' >
+    <input name="map-address" class='map-address' bindinput ='searchAddress' value="{{value}}" placeholder="请输入您的收货地址"/>
+    <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+    <!-- <text class="search-btn" wx:if="{{showResult}}" bindtap="cancelSearch">取消</text> -->
+  </view>
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" controls="{{controls}}" 
+    bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"   
+    bindregionchange="regionchange" circles="{{circles}}"  style="z-index:1;width: 100%; height: 550rpx;">
+    </map>
+</view>
+
+<scroll-view scroll-y="true" style='margin-top:650rpx;-webkit-transform: translateZ(0);'> 
+  <navigator url="../address/address" class='mapbabbababba'>
+          <view wx:if="{{hasmapAddress}}" class="orders-mapAddress">
+              <view wx:for="{{mapAddress}}" wx:key="index" data-text="{{item}}" class="orders-list" bindtap="storemwords">
+                  <view class="orders-mapAddress-detail">{{item.title}}</view>
+                  <view class='mapAddress-address'>{{item.address}}</view>
+              </view>  
+          </view>
+          <view wx:else class="orders-no-mapAddress">暂时搜不到你想要的地方哦~</view>
+  </navigator>
+</scroll-view>
+
+ <navigator url="../address/address" class='mapbabbababba'>
+<cover-view class="mapwords" wx:if="{{showMapwords}}">
+    <cover-view class="mapwords-item" wx:for="{{mapwords}}" wx:key="index" data-text="{{item}}" bindtap="storemapwords">
+    {{item.title}}
+     <cover-view class='mapwords-address'>{{item.address}}</cover-view>
+    </cover-view>   
+</cover-view>
+ </navigator>

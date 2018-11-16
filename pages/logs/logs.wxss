@@ -1,0 +1,38 @@
+/* pages/logs/logs.wxss */
+.price{
+  color: #fd3b40;
+}
+.item_img{
+  margin-left: 11%;
+}
+.ar_item{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 25px;
+}
+.item-border{
+   color: #fff;
+   width: 100px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   font-size: 16px;
+}
+.green{
+  border-radius: 15px 0 0 15px;
+  background-color: #ffaa02
+}
+.red{
+  border-radius: 0 15px 15px 0;
+  background-color: #fd3b40;
+}

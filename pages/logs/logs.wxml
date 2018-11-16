@@ -1,0 +1,16 @@
+<!--pages/logs/logs.wxml-->
+<view class="item">   
+  <image class='item_img' src='{{data_status}}'></image>  
+</view>  
+<view class="ar_item" >  
+  <text class="ar_content">{{data_MTId}}</text>  
+</view>  
+<view class="ar_item">  
+  <text class="ar_name price">价格:</text>  
+  <text class="ar_content price">{{data_duration}}</text>  
+  <text class="ar_name price">元</text>  
+</view>  
+<view class='footer'>
+  <view class='item-border green' data-goodid="{{data_ID}}" bindtap='addGoods'>{{intCart}}</view>
+  <view class='item-border red' bindtap='buyNow'>{{buyNow}}</view>
+</view>
